@@ -1,0 +1,42 @@
+[
+  {
+    "id": "CATEGORY_001",
+    "name": "Electronics"
+  },
+  {
+    "id": "CATEGORY_002",
+    "name": "Mobiles"
+  },
+  {
+    "id": "CATEGORY_003",
+    "name": "Laptops"
+  },
+  {
+    "id": "CATEGORY_004",
+    "name": "Televisions"
+  },
+  {
+    "id": "CATEGORY_005",
+    "name": "Home Appliances"
+  },
+  {
+    "id": "CATEGORY_006",
+    "name": "Fashion"
+  },
+  {
+    "id": "CATEGORY_007",
+    "name": "Footwear"
+  },
+  {
+    "id": "CATEGORY_008",
+    "name": "Beauty"
+  },
+  {
+    "id": "CATEGORY_009",
+    "name": "Books"
+  },
+  {
+    "id": "CATEGORY_010",
+    "name": "Groceries"
+  }
+]

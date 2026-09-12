@@ -1,0 +1,42 @@
+[
+  {
+    "id": "AREA_001",
+    "city_id": "CITY_001",
+    "name": "Manish Nagar"
+  },
+  {
+    "id": "AREA_002",
+    "city_id": "CITY_001",
+    "name": "Dharampeth"
+  },
+  {
+    "id": "AREA_003",
+    "city_id": "CITY_001",
+    "name": "Civil Lines"
+  },
+  {
+    "id": "AREA_004",
+    "city_id": "CITY_002",
+    "name": "Kothrud"
+  },
+  {
+    "id": "AREA_005",
+    "city_id": "CITY_003",
+    "name": "Andheri"
+  },
+  {
+    "id": "AREA_006",
+    "city_id": "CITY_004",
+    "name": "Navrangpura"
+  },
+  {
+    "id": "AREA_007",
+    "city_id": "CITY_005",
+    "name": "Whitefield"
+  },
+  {
+    "id": "AREA_008",
+    "city_id": "CITY_006",
+    "name": "SoMa"
+  }
+]

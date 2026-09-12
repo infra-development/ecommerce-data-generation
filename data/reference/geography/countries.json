@@ -1,0 +1,12 @@
+[
+  {
+    "id": "COUNTRY_001",
+    "name": "India",
+    "iso_code": "IN"
+  },
+  {
+    "id": "COUNTRY_002",
+    "name": "United States",
+    "iso_code": "US"
+  }
+]

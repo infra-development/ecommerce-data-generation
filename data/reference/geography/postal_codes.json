@@ -1,0 +1,42 @@
+[
+  {
+    "id": "POSTAL_CODE_001",
+    "area_id": "AREA_001",
+    "code": "440015"
+  },
+  {
+    "id": "POSTAL_CODE_002",
+    "area_id": "AREA_002",
+    "code": "440010"
+  },
+  {
+    "id": "POSTAL_CODE_003",
+    "area_id": "AREA_003",
+    "code": "440001"
+  },
+  {
+    "id": "POSTAL_CODE_004",
+    "area_id": "AREA_004",
+    "code": "411038"
+  },
+  {
+    "id": "POSTAL_CODE_005",
+    "area_id": "AREA_005",
+    "code": "400053"
+  },
+  {
+    "id": "POSTAL_CODE_006",
+    "area_id": "AREA_006",
+    "code": "380009"
+  },
+  {
+    "id": "POSTAL_CODE_007",
+    "area_id": "AREA_007",
+    "code": "560066"
+  },
+  {
+    "id": "POSTAL_CODE_008",
+    "area_id": "AREA_008",
+    "code": "94103"
+  }
+]

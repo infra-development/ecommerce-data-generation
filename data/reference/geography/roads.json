@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ROAD_001",
+    "area_id": "AREA_001",
+    "name": "Somalwada Road"
+  },
+  {
+    "id": "ROAD_002",
+    "area_id": "AREA_001",
+    "name": "Central Avenue"
+  },
+  {
+    "id": "ROAD_003",
+    "area_id": "AREA_002",
+    "name": "West High Court Road"
+  },
+  {
+    "id": "ROAD_004",
+    "area_id": "AREA_003",
+    "name": "Civil Lines Road"
+  },
+  {
+    "id": "ROAD_005",
+    "area_id": "AREA_004",
+    "name": "Paud Road"
+  },
+  {
+    "id": "ROAD_006",
+    "area_id": "AREA_005",
+    "name": "Andheri East Road"
+  },
+  {
+    "id": "ROAD_007",
+    "area_id": "AREA_006",
+    "name": "C G Road"
+  },
+  {
+    "id": "ROAD_008",
+    "area_id": "AREA_007",
+    "name": "Whitefield Main Road"
+  },
+  {
+    "id": "ROAD_009",
+    "area_id": "AREA_008",
+    "name": "Mission Street"
+  }
+]

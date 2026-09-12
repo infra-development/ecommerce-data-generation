@@ -1,0 +1,32 @@
+[
+  {
+    "id": "CITY_001",
+    "state_id": "STATE_001",
+    "name": "Nagpur"
+  },
+  {
+    "id": "CITY_002",
+    "state_id": "STATE_001",
+    "name": "Pune"
+  },
+  {
+    "id": "CITY_003",
+    "state_id": "STATE_001",
+    "name": "Mumbai"
+  },
+  {
+    "id": "CITY_004",
+    "state_id": "STATE_002",
+    "name": "Ahmedabad"
+  },
+  {
+    "id": "CITY_005",
+    "state_id": "STATE_003",
+    "name": "Bengaluru"
+  },
+  {
+    "id": "CITY_006",
+    "state_id": "STATE_004",
+    "name": "San Francisco"
+  }
+]

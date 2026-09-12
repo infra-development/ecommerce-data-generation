@@ -1,0 +1,26 @@
+[
+  {
+    "id": "STATE_001",
+    "country_id": "COUNTRY_001",
+    "name": "Maharashtra",
+    "code": "MH"
+  },
+  {
+    "id": "STATE_002",
+    "country_id": "COUNTRY_001",
+    "name": "Gujarat",
+    "code": "GJ"
+  },
+  {
+    "id": "STATE_003",
+    "country_id": "COUNTRY_001",
+    "name": "Karnataka",
+    "code": "KA"
+  },
+  {
+    "id": "STATE_004",
+    "country_id": "COUNTRY_002",
+    "name": "California",
+    "code": "CA"
+  }
+]

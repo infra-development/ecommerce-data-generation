@@ -1,0 +1,37 @@
+[
+  {
+    "id": "SOCIETY_001",
+    "road_id": "ROAD_001",
+    "name": "Shivaji Residency"
+  },
+  {
+    "id": "SOCIETY_002",
+    "road_id": "ROAD_001",
+    "name": "Green Valley"
+  },
+  {
+    "id": "SOCIETY_003",
+    "road_id": "ROAD_002",
+    "name": "Lake View Residency"
+  },
+  {
+    "id": "SOCIETY_004",
+    "road_id": "ROAD_003",
+    "name": "Royal Heights"
+  },
+  {
+    "id": "SOCIETY_005",
+    "road_id": "ROAD_005",
+    "name": "Kothrud Enclave"
+  },
+  {
+    "id": "SOCIETY_006",
+    "road_id": "ROAD_007",
+    "name": "Navrang Heights"
+  },
+  {
+    "id": "SOCIETY_007",
+    "road_id": "ROAD_008",
+    "name": "Whitefield Residency"
+  }
+]
