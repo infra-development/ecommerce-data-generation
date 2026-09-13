@@ -24,6 +24,9 @@ class GenerationPlanBuilderTest extends AnyFunSuite {
           CardinalityDefaults.medium,
         distributions = DistributionConfig(
           distributions = Map.empty
+        ),
+        productPricing = ProductPricingConfig(
+          categories = Map.empty
         )
       )
 
@@ -61,6 +64,9 @@ class GenerationPlanBuilderTest extends AnyFunSuite {
           CardinalityDefaults.high,
         distributions = DistributionConfig(
           distributions = Map.empty
+        ),
+        productPricing = ProductPricingConfig(
+          categories = Map.empty
         )
       )
 

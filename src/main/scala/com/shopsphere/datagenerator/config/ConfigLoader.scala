@@ -7,6 +7,7 @@ object ConfigLoader {
   def load(): GenerationConfig = {
     val config = ConfigFactory.load()
     val distributionConfig = DistributionConfigLoader.load(config)
+    val productPricingConfig = ProductPricingConfigLoader.load(config)
 
     val profileName = config.getString("generator.profile")
     val profile = GenerationProfile.fromString(profileName) match {
@@ -54,7 +55,8 @@ object ConfigLoader {
       output = outputSettings,
       profileDefinition = profileDefinition,
       cardinality = cardinality,
-      distributions = distributionConfig
+      distributions = distributionConfig,
+      productPricing = productPricingConfig
     )
   }
 }

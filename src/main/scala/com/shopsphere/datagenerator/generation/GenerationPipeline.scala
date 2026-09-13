@@ -188,6 +188,7 @@ object GenerationPipeline {
         productId =
           f"PRODUCT_$index%09d",
         referenceData = referenceData,
+        pricingConfig = context.config.productPricing,
         random = random.derive(index.toString)
       )
     }
@@ -318,68 +319,68 @@ object GenerationPipeline {
     val random =
       context.random.derive("events")
 
-    val eventsPerSession =
-      Math.max(
-        1,
-        Math.round(
+    val eventCounts =
+      CardinalityAllocator.allocate(
+        baseCount = sessions.size,
+        averagePerBase =
           context.config.cardinality.eventsPerSession
-        ).toInt
       )
 
     var eventIndex = 1L
 
-    sessions.flatMap { session =>
+    sessions.zip(eventCounts).flatMap {
+      case (session, eventCount) =>
 
-      (1 to eventsPerSession).map { sequence =>
+        (1 to eventCount).map { sequence =>
 
-        val eventRandom =
-          random.derive(
-            s"${session.id}-$sequence"
-          )
-
-        val eventType =
-          EventGenerator.eventTypes(
-            eventRandom
-              .derive("type")
-              .nextInt(
-                EventGenerator.eventTypes.size
-              )
-          )
-
-        val productId =
-          if (
-            eventType == "PRODUCT_VIEW" ||
-              eventType == "ADD_TO_CART" ||
-              eventType == "PURCHASE"
-          ) {
-            Some(
-              products(
-                eventRandom
-                  .derive("product")
-                  .nextInt(products.size)
-              ).id
+          val eventRandom =
+            random.derive(
+              s"${session.id}-$sequence"
             )
-          } else {
-            None
-          }
 
-        val event =
-          EventGenerator.generate(
-            eventId =
-              f"EVENT_$eventIndex%09d",
-            sessionId = session.id,
-            customerId = session.customerId,
-            sessionStart = session.sessionStart,
-            sessionEnd = session.sessionEnd,
-            eventType = eventType,
-            productId = productId,
-            random = eventRandom
-          )
+          val eventType =
+            EventGenerator.eventTypes(
+              eventRandom
+                .derive("type")
+                .nextInt(
+                  EventGenerator.eventTypes.size
+                )
+            )
 
-        eventIndex += 1
+          val productId =
+            if (
+              eventType == "PRODUCT_VIEW" ||
+                eventType == "ADD_TO_CART" ||
+                eventType == "PURCHASE"
+            ) {
+              Some(
+                products(
+                  eventRandom
+                    .derive("product")
+                    .nextInt(products.size)
+                ).id
+              )
+            } else {
+              None
+            }
 
-        event
-      }
+          val event =
+            EventGenerator.generate(
+              eventId =
+                f"EVENT_$eventIndex%09d",
+              sessionId = session.id,
+              customerId = session.customerId,
+              sessionStart = session.sessionStart,
+              sessionEnd = session.sessionEnd,
+              eventType = eventType,
+              productId = productId,
+              random = eventRandom
+            )
+
+          eventIndex += 1
+
+          event
+        }
     }
   }
 }

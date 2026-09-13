@@ -1,6 +1,10 @@
 package com.shopsphere.datagenerator.generation
 
-import com.shopsphere.datagenerator.distribution.RandomGenerator
+import com.shopsphere.datagenerator.config.ProductPricingConfig
+import com.shopsphere.datagenerator.distribution.{
+  RandomGenerator,
+  TriangularDistribution
+}
 import com.shopsphere.datagenerator.model.Product
 import com.shopsphere.datagenerator.reference.catalog.CatalogReferenceData
 
@@ -9,6 +13,7 @@ object ProductGenerator {
   def generate(
                 productId: String,
                 referenceData: CatalogReferenceData,
+                pricingConfig: ProductPricingConfig,
                 random: RandomGenerator
               ): Product = {
 
@@ -18,18 +23,47 @@ object ProductGenerator {
       )
     }
 
+    if (referenceData.categories.isEmpty) {
+      throw new IllegalArgumentException(
+        "Catalog categories must not be empty."
+      )
+    }
+
+    if (referenceData.brands.isEmpty) {
+      throw new IllegalArgumentException(
+        "Catalog brands must not be empty."
+      )
+    }
+
     val category =
       referenceData.categories(
-        random.nextInt(referenceData.categories.size)
+        random.derive("category").nextInt(
+          referenceData.categories.size
+        )
       )
 
     val brand =
       referenceData.brands(
-        random.nextInt(referenceData.brands.size)
+        random.derive("brand").nextInt(
+          referenceData.brands.size
+        )
+      )
+
+    val priceDefinition =
+      pricingConfig.categories.getOrElse(
+        category.id,
+        throw new IllegalArgumentException(
+          s"Missing product pricing configuration for category: ${category.id}"
+        )
       )
 
     val price =
-      generatePrice(random)
+      generatePrice(
+        priceDefinition.min,
+        priceDefinition.max,
+        priceDefinition.mode,
+        random.derive("price")
+      )
 
     Product(
       id = productId,
@@ -41,14 +75,21 @@ object ProductGenerator {
   }
 
   private def generatePrice(
+                             min: Double,
+                             max: Double,
+                             mode: Double,
                              random: RandomGenerator
                            ): BigDecimal = {
 
-    val rawPrice =
-      random.nextDouble(100.0, 100000.0)
+    val distribution =
+      new TriangularDistribution(
+        min = min,
+        max = max,
+        mode = mode
+      )
 
     BigDecimal(
-      rawPrice
+      distribution.sample(random)
     ).setScale(
       2,
       BigDecimal.RoundingMode.HALF_UP

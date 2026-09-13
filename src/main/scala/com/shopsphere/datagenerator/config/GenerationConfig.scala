@@ -16,5 +16,6 @@ case class GenerationConfig(
                              output: OutputSettings,
                              profileDefinition: GenerationProfileDefinition,
                              cardinality: CardinalityConfig,
-                             distributions: DistributionConfig
+                             distributions: DistributionConfig,
+                             productPricing: ProductPricingConfig
                            )
