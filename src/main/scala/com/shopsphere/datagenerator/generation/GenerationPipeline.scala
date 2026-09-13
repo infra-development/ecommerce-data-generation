@@ -5,6 +5,8 @@ import com.shopsphere.datagenerator.reference.catalog.CatalogReferenceLoader
 import com.shopsphere.datagenerator.reference.customer.CustomerReferenceLoader
 import com.shopsphere.datagenerator.relationship.OrderRelationshipGenerator
 
+import java.nio.file.Paths
+
 object GenerationPipeline {
 
   def generate(
@@ -16,7 +18,7 @@ object GenerationPipeline {
       CustomerReferenceLoader.load("data/reference/customer")
 
     val catalogReferenceData =
-      CatalogReferenceLoader.load("data/reference/catalog")
+      CatalogReferenceLoader.load(Paths.get("data/reference/catalog"))
 
     println("Generating customers...")
 
@@ -120,6 +122,7 @@ object GenerationPipeline {
         customerId =
           f"CUSTOMER_$index%09d",
         referenceData = referenceData,
+        generationConfig = context.config.customerGeneration,
         random = random.derive(index.toString)
       )
     }
@@ -185,10 +188,12 @@ object GenerationPipeline {
     (1L to plan.productCount).map { index =>
 
       ProductGenerator.generate(
-        productId =
-          f"PRODUCT_$index%09d",
+        productId = f"PRODUCT_$index%09d",
         referenceData = referenceData,
+        productDistributionConfig =
+          context.config.productDistribution,
         pricingConfig = context.config.productPricing,
+        brandAffinityConfig = context.config.productBrandAffinity,
         random = random.derive(index.toString)
       )
     }

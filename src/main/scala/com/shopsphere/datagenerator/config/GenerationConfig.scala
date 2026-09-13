@@ -17,5 +17,8 @@ case class GenerationConfig(
                              profileDefinition: GenerationProfileDefinition,
                              cardinality: CardinalityConfig,
                              distributions: DistributionConfig,
-                             productPricing: ProductPricingConfig
+                             productDistribution: ProductDistributionConfig,
+                             productPricing: ProductPricingConfig,
+                             productBrandAffinity: ProductBrandAffinityConfig,
+                             customerGeneration: CustomerGenerationConfig
                            )

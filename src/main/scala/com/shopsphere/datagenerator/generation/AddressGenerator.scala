@@ -13,22 +13,16 @@ object AddressGenerator {
                 random: RandomGenerator
               ): Address = {
 
-    // An address must always have its own identifier.
     require(
       addressId.nonEmpty,
       "Address ID must not be empty."
     )
 
-    // Customer ownership is mandatory because Customer -> Address
-    // is an explicit relationship in the ShopSphere data model.
     require(
       customerId.nonEmpty,
       "Customer ID must not be empty."
     )
 
-    // Sort the buildings before random selection.
-    // Geography data is stored in maps, whose iteration order should
-    // not be relied upon for deterministic generation.
     val buildings =
       geography.buildings.values.toSeq.sortBy(_.id)
 
@@ -37,17 +31,22 @@ object AddressGenerator {
       "Cannot generate an address because no buildings are available."
     )
 
-    // Select a deterministic random building from the available
-    // geography reference data.
     val building =
-      buildings(random.nextInt(buildings.size))
+      buildings(
+        random
+          .derive("building")
+          .nextInt(buildings.size)
+      )
 
-    // Generate a valid floor and unit within the selected building.
     val floor =
-      random.nextInt(1, building.floors)
+      random
+        .derive("floor")
+        .nextInt(1, building.floors)
 
     val unitOnFloor =
-      random.nextInt(1, building.unitsPerFloor)
+      random
+        .derive("unit-on-floor")
+        .nextInt(1, building.unitsPerFloor)
 
     val unitNumber =
       UnitNumberGenerator.generate(
@@ -56,8 +55,6 @@ object AddressGenerator {
         unitOnFloor
       )
 
-    // Resolve the building hierarchy so that the postal code comes
-    // from the same geographic area as the selected building.
     val hierarchy =
       geography.resolveBuilding(building.id)
 
@@ -74,10 +71,11 @@ object AddressGenerator {
 
     val postalCode =
       postalCodes(
-        random.nextInt(postalCodes.size)
+        random
+          .derive("postal-code")
+          .nextInt(postalCodes.size)
       )
 
-    // customerId establishes the Customer -> Address relationship.
     Address(
       id = addressId,
       customerId = customerId,

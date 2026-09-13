@@ -1,0 +1,206 @@
+[
+  {
+    "product_type_id": "PRODUCT_TYPE_001",
+    "min": 3500,
+    "max": 45000,
+    "mode": 18000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_002",
+    "min": 1800,
+    "max": 30000,
+    "mode": 9000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_003",
+    "min": 5000,
+    "max": 50000,
+    "mode": 18000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_004",
+    "min": 7000,
+    "max": 120000,
+    "mode": 35000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_005",
+    "min": 1200,
+    "max": 8000,
+    "mode": 3000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_006",
+    "min": 60000,
+    "max": 250000,
+    "mode": 130000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_007",
+    "min": 50000,
+    "max": 180000,
+    "mode": 85000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_008",
+    "min": 50000,
+    "max": 180000,
+    "mode": 90000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_009",
+    "min": 25000,
+    "max": 180000,
+    "mode": 65000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_010",
+    "min": 70000,
+    "max": 250000,
+    "mode": 120000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_011",
+    "min": 35000,
+    "max": 220000,
+    "mode": 80000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_012",
+    "min": 20000,
+    "max": 180000,
+    "mode": 50000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_013",
+    "min": 18000,
+    "max": 90000,
+    "mode": 35000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_014",
+    "min": 25000,
+    "max": 90000,
+    "mode": 45000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_015",
+    "min": 5000,
+    "max": 30000,
+    "mode": 12000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_016",
+    "min": 500,
+    "max": 5000,
+    "mode": 1800
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_017",
+    "min": 1200,
+    "max": 7000,
+    "mode": 2800
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_018",
+    "min": 1800,
+    "max": 12000,
+    "mode": 5000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_019",
+    "min": 1200,
+    "max": 10000,
+    "mode": 3500
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_020",
+    "min": 2500,
+    "max": 18000,
+    "mode": 6000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_021",
+    "min": 2000,
+    "max": 16000,
+    "mode": 5000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_022",
+    "min": 2500,
+    "max": 16000,
+    "mode": 6000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_023",
+    "min": 150,
+    "max": 1500,
+    "mode": 500
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_024",
+    "min": 200,
+    "max": 3000,
+    "mode": 800
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_025",
+    "min": 250,
+    "max": 1800,
+    "mode": 700
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_026",
+    "min": 300,
+    "max": 2500,
+    "mode": 900
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_027",
+    "min": 150,
+    "max": 1200,
+    "mode": 450
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_028",
+    "min": 250,
+    "max": 1500,
+    "mode": 600
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_029",
+    "min": 500,
+    "max": 2500,
+    "mode": 1000
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_030",
+    "min": 250,
+    "max": 2000,
+    "mode": 700
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_031",
+    "min": 30,
+    "max": 500,
+    "mode": 150
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_032",
+    "min": 40,
+    "max": 1000,
+    "mode": 200
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_033",
+    "min": 50,
+    "max": 2500,
+    "mode": 700
+  },
+  {
+    "product_type_id": "PRODUCT_TYPE_034",
+    "min": 80,
+    "max": 1200,
+    "mode": 300
+  }
+]

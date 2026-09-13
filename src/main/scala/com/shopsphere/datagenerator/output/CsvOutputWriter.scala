@@ -156,7 +156,9 @@ object CsvOutputWriter {
         "id",
         "name",
         "category_id",
+        "product_type_id",
         "brand_id",
+        "product_model_id",
         "price"
       ),
       data.products.iterator.map { product =>
@@ -164,7 +166,9 @@ object CsvOutputWriter {
           product.id,
           product.name,
           product.categoryId,
+          product.productTypeId,
           product.brandId,
+          product.productModelId,
           product.price.toString()
         )
       }
@@ -217,7 +221,7 @@ object CsvOutputWriter {
           item.id,
           item.orderId,
           item.productId,
-          item.quantity.toString,
+          item.quantity.toString(),
           item.unitPrice.toString(),
           item.lineAmount.toString()
         )

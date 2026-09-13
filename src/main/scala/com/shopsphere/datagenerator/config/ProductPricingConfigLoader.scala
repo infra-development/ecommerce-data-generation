@@ -17,51 +17,51 @@ object ProductPricingConfigLoader {
     val pricingConfig =
       config.getConfig("product-pricing")
 
-    val categories =
+    val productTypes =
       pricingConfig
         .root()
         .keySet()
         .asScala
-        .map { categoryId =>
+        .map { productTypeId =>
 
-          val categoryConfig =
-            pricingConfig.getConfig(categoryId)
+          val productTypeConfig =
+            pricingConfig.getConfig(productTypeId)
 
           requirePath(
-            categoryConfig,
-            categoryId,
+            productTypeConfig,
+            productTypeId,
             "min"
           )
 
           requirePath(
-            categoryConfig,
-            categoryId,
+            productTypeConfig,
+            productTypeId,
             "max"
           )
 
           requirePath(
-            categoryConfig,
-            categoryId,
+            productTypeConfig,
+            productTypeId,
             "mode"
           )
 
           val min =
-            categoryConfig.getDouble("min")
+            productTypeConfig.getDouble("min")
 
           val max =
-            categoryConfig.getDouble("max")
+            productTypeConfig.getDouble("max")
 
           val mode =
-            categoryConfig.getDouble("mode")
+            productTypeConfig.getDouble("mode")
 
           validatePriceDefinition(
-            categoryId = categoryId,
+            productTypeId = productTypeId,
             min = min,
             max = max,
             mode = mode
           )
 
-          categoryId ->
+          productTypeId ->
             ProductPriceDefinition(
               min = min,
               max = max,
@@ -70,32 +70,32 @@ object ProductPricingConfigLoader {
         }
         .toMap
 
-    if (categories.isEmpty) {
+    if (productTypes.isEmpty) {
       throw new IllegalArgumentException(
         "Product pricing configuration must not be empty."
       )
     }
 
     ProductPricingConfig(
-      categories = categories
+      productTypes = productTypes
     )
   }
 
   private def requirePath(
                            config: Config,
-                           categoryId: String,
+                           productTypeId: String,
                            path: String
                          ): Unit = {
 
     if (!config.hasPath(path)) {
       throw new IllegalArgumentException(
-        s"Missing product pricing '$path' for category: $categoryId"
+        s"Missing product pricing '$path' for product type: $productTypeId"
       )
     }
   }
 
   private def validatePriceDefinition(
-                                       categoryId: String,
+                                       productTypeId: String,
                                        min: Double,
                                        max: Double,
                                        mode: Double
@@ -103,37 +103,37 @@ object ProductPricingConfigLoader {
 
     if (min.isNaN || min.isInfinity) {
       throw new IllegalArgumentException(
-        s"Product pricing minimum must be finite for category: $categoryId"
+        s"Product pricing minimum must be finite for product type: $productTypeId"
       )
     }
 
     if (max.isNaN || max.isInfinity) {
       throw new IllegalArgumentException(
-        s"Product pricing maximum must be finite for category: $categoryId"
+        s"Product pricing maximum must be finite for product type: $productTypeId"
       )
     }
 
     if (mode.isNaN || mode.isInfinity) {
       throw new IllegalArgumentException(
-        s"Product pricing mode must be finite for category: $categoryId"
+        s"Product pricing mode must be finite for product type: $productTypeId"
       )
     }
 
     if (min < 0.0) {
       throw new IllegalArgumentException(
-        s"Product pricing minimum must not be negative for category: $categoryId"
+        s"Product pricing minimum must not be negative for product type: $productTypeId"
       )
     }
 
     if (min > max) {
       throw new IllegalArgumentException(
-        s"Product pricing minimum must not be greater than maximum for category: $categoryId"
+        s"Product pricing minimum must not be greater than maximum for product type: $productTypeId"
       )
     }
 
     if (mode < min || mode > max) {
       throw new IllegalArgumentException(
-        s"Product pricing mode must be between minimum and maximum for category: $categoryId"
+        s"Product pricing mode must be between minimum and maximum for product type: $productTypeId"
       )
     }
   }

@@ -4,6 +4,7 @@ import com.shopsphere.datagenerator.generation.GeneratedData
 import com.shopsphere.datagenerator.model._
 import org.scalatest.funsuite.AnyFunSuite
 
+import java.time.LocalDate
 import java.time.LocalDateTime
 
 class StatisticsCollectorTest
@@ -23,18 +24,36 @@ class StatisticsCollectorTest
       customers =
         Seq(
           Customer(
-            "C1",
-            "John",
-            "Smith",
-            "john@example.com",
-            "900000001"
+            id = "C1",
+            firstName = "John",
+            lastName = "Smith",
+            email = "john@example.com",
+            phone = "900000001",
+            gender = "MALE",
+            dateOfBirth = LocalDate.of(1990, 1, 1),
+            registrationDate = LocalDate.of(2020, 1, 1),
+            customerStatus = "ACTIVE",
+            customerSegment = "STANDARD",
+            acquisitionChannel = "ORGANIC",
+            acquisitionCampaign = "SEO",
+            preferredDevice = "MOBILE",
+            preferredPaymentMethod = "UPI"
           ),
           Customer(
-            "C2",
-            "Jane",
-            "Doe",
-            "jane@example.com",
-            "900000002"
+            id = "C2",
+            firstName = "Jane",
+            lastName = "Doe",
+            email = "jane@example.com",
+            phone = "900000002",
+            gender = "FEMALE",
+            dateOfBirth = LocalDate.of(1992, 2, 2),
+            registrationDate = LocalDate.of(2021, 2, 2),
+            customerStatus = "ACTIVE",
+            customerSegment = "PREMIUM",
+            acquisitionChannel = "PAID_SEARCH",
+            acquisitionCampaign = "GOOGLE_ADS",
+            preferredDevice = "DESKTOP",
+            preferredPaymentMethod = "CREDIT_CARD"
           )
         ),
 
@@ -53,11 +72,13 @@ class StatisticsCollectorTest
       products =
         Seq(
           Product(
-            "P1",
-            "Product 1",
-            "CAT1",
-            "BR1",
-            BigDecimal("100.00")
+            id = "P1",
+            name = "Product 1",
+            categoryId = "CAT1",
+            productTypeId = "PRODUCT_TYPE_001",
+            brandId = "BR1",
+            productModelId = "PRODUCT_MODEL_001",
+            price = BigDecimal("100.00")
           )
         ),
 

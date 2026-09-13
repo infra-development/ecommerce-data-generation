@@ -3,7 +3,54 @@ package com.shopsphere.datagenerator.generation
 import com.shopsphere.datagenerator.config._
 import org.scalatest.funsuite.AnyFunSuite
 
+import java.time.LocalDate
+
 class GenerationPlanBuilderTest extends AnyFunSuite {
+
+  private val customerGenerationConfig =
+    CustomerGenerationConfig(
+      asOfDate = LocalDate.of(2026, 1, 1),
+      registrationHistoryDays = 3650,
+      ageBands =
+        Seq(
+          CustomerAgeBand(
+            minAge = 18,
+            maxAge = 80,
+            weight = 1.0
+          )
+        ),
+      gender =
+        Map(
+          "MALE" -> 1.0
+        ),
+      customerStatus =
+        Map(
+          "ACTIVE" -> 1.0
+        ),
+      customerSegments =
+        Map(
+          "STANDARD" -> 1.0
+        ),
+      acquisitionChannels =
+        Map(
+          "ORGANIC" -> 1.0
+        ),
+      acquisitionCampaigns =
+        Map(
+          "ORGANIC" ->
+            Map(
+              "SEO" -> 1.0
+            )
+        ),
+      preferredDevices =
+        Map(
+          "MOBILE" -> 1.0
+        ),
+      preferredPaymentMethods =
+        Map(
+          "UPI" -> 1.0
+        )
+    )
 
   test("build should calculate counts from profile and cardinality configuration") {
 
@@ -25,9 +72,17 @@ class GenerationPlanBuilderTest extends AnyFunSuite {
         distributions = DistributionConfig(
           distributions = Map.empty
         ),
+        productDistribution = ProductDistributionConfig(
+          categories = Map.empty,
+          productTypes = Map.empty
+        ),
         productPricing = ProductPricingConfig(
-          categories = Map.empty
-        )
+          productTypes = Map.empty
+        ),
+        productBrandAffinity = ProductBrandAffinityConfig(
+          productTypes = Map.empty
+        ),
+        customerGeneration = customerGenerationConfig
       )
 
     val plan =
@@ -65,9 +120,17 @@ class GenerationPlanBuilderTest extends AnyFunSuite {
         distributions = DistributionConfig(
           distributions = Map.empty
         ),
+        productDistribution = ProductDistributionConfig(
+          categories = Map.empty,
+          productTypes = Map.empty
+        ),
         productPricing = ProductPricingConfig(
-          categories = Map.empty
-        )
+          productTypes = Map.empty
+        ),
+        productBrandAffinity = ProductBrandAffinityConfig(
+          productTypes = Map.empty
+        ),
+        customerGeneration = customerGenerationConfig
       )
 
     val plan =

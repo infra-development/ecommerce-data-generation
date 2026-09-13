@@ -1,0 +1,172 @@
+[
+  {
+    "id": "PRODUCT_TYPE_001",
+    "category_id": "CATEGORY_001",
+    "name": "Smartwatch"
+  },
+  {
+    "id": "PRODUCT_TYPE_002",
+    "category_id": "CATEGORY_001",
+    "name": "Wireless Earbuds"
+  },
+  {
+    "id": "PRODUCT_TYPE_003",
+    "category_id": "CATEGORY_001",
+    "name": "Bluetooth Speaker"
+  },
+  {
+    "id": "PRODUCT_TYPE_004",
+    "category_id": "CATEGORY_002",
+    "name": "Smartphone"
+  },
+  {
+    "id": "PRODUCT_TYPE_005",
+    "category_id": "CATEGORY_002",
+    "name": "Feature Phone"
+  },
+  {
+    "id": "PRODUCT_TYPE_006",
+    "category_id": "CATEGORY_003",
+    "name": "Gaming Laptop"
+  },
+  {
+    "id": "PRODUCT_TYPE_007",
+    "category_id": "CATEGORY_003",
+    "name": "Business Laptop"
+  },
+  {
+    "id": "PRODUCT_TYPE_008",
+    "category_id": "CATEGORY_003",
+    "name": "Ultrabook"
+  },
+  {
+    "id": "PRODUCT_TYPE_009",
+    "category_id": "CATEGORY_004",
+    "name": "LED TV"
+  },
+  {
+    "id": "PRODUCT_TYPE_010",
+    "category_id": "CATEGORY_004",
+    "name": "OLED TV"
+  },
+  {
+    "id": "PRODUCT_TYPE_011",
+    "category_id": "CATEGORY_004",
+    "name": "QLED TV"
+  },
+  {
+    "id": "PRODUCT_TYPE_012",
+    "category_id": "CATEGORY_005",
+    "name": "Refrigerator"
+  },
+  {
+    "id": "PRODUCT_TYPE_013",
+    "category_id": "CATEGORY_005",
+    "name": "Washing Machine"
+  },
+  {
+    "id": "PRODUCT_TYPE_014",
+    "category_id": "CATEGORY_005",
+    "name": "Air Conditioner"
+  },
+  {
+    "id": "PRODUCT_TYPE_015",
+    "category_id": "CATEGORY_005",
+    "name": "Microwave Oven"
+  },
+  {
+    "id": "PRODUCT_TYPE_016",
+    "category_id": "CATEGORY_006",
+    "name": "T-Shirt"
+  },
+  {
+    "id": "PRODUCT_TYPE_017",
+    "category_id": "CATEGORY_006",
+    "name": "Jeans"
+  },
+  {
+    "id": "PRODUCT_TYPE_018",
+    "category_id": "CATEGORY_006",
+    "name": "Jacket"
+  },
+  {
+    "id": "PRODUCT_TYPE_019",
+    "category_id": "CATEGORY_006",
+    "name": "Dress"
+  },
+  {
+    "id": "PRODUCT_TYPE_020",
+    "category_id": "CATEGORY_007",
+    "name": "Running Shoes"
+  },
+  {
+    "id": "PRODUCT_TYPE_021",
+    "category_id": "CATEGORY_007",
+    "name": "Sneakers"
+  },
+  {
+    "id": "PRODUCT_TYPE_022",
+    "category_id": "CATEGORY_007",
+    "name": "Walking Shoes"
+  },
+  {
+    "id": "PRODUCT_TYPE_023",
+    "category_id": "CATEGORY_008",
+    "name": "Face Wash"
+  },
+  {
+    "id": "PRODUCT_TYPE_024",
+    "category_id": "CATEGORY_008",
+    "name": "Moisturizer"
+  },
+  {
+    "id": "PRODUCT_TYPE_025",
+    "category_id": "CATEGORY_008",
+    "name": "Shampoo"
+  },
+  {
+    "id": "PRODUCT_TYPE_026",
+    "category_id": "CATEGORY_008",
+    "name": "Lipstick"
+  },
+  {
+    "id": "PRODUCT_TYPE_027",
+    "category_id": "CATEGORY_009",
+    "name": "Fiction"
+  },
+  {
+    "id": "PRODUCT_TYPE_028",
+    "category_id": "CATEGORY_009",
+    "name": "Non-Fiction"
+  },
+  {
+    "id": "PRODUCT_TYPE_029",
+    "category_id": "CATEGORY_009",
+    "name": "Technology"
+  },
+  {
+    "id": "PRODUCT_TYPE_030",
+    "category_id": "CATEGORY_009",
+    "name": "Business"
+  },
+  {
+    "id": "PRODUCT_TYPE_031",
+    "category_id": "CATEGORY_010",
+    "name": "Snacks"
+  },
+  {
+    "id": "PRODUCT_TYPE_032",
+    "category_id": "CATEGORY_010",
+    "name": "Beverages"
+  },
+  {
+    "id": "PRODUCT_TYPE_033",
+    "category_id": "CATEGORY_010",
+    "name": "Staples"
+  },
+  {
+    "id": "PRODUCT_TYPE_034",
+    "category_id": "CATEGORY_010",
+    "name": "Packaged Foods"
+  }
+]

@@ -202,6 +202,10 @@ object Main {
       )
     }
 
+    // --------------------------------------------------
+    // 7. Collect and display dataset statistics
+    // --------------------------------------------------
+
     println()
     println("Collecting dataset statistics...")
 
@@ -219,33 +223,82 @@ object Main {
 
     println()
     println("Cardinality:")
+
     println(
       f"  Items per order:        ${statistics.averages("items_per_order")}%.2f"
     )
+
+    println(
+      f"    Distribution:         ${formatDistribution("items_per_order", statistics)}"
+    )
+
     println(
       f"  Sessions per customer:  ${statistics.averages("sessions_per_customer")}%.2f"
     )
+
+    println(
+      f"    Distribution:         ${formatDistribution("sessions_per_customer", statistics)}"
+    )
+
     println(
       f"  Events per session:     ${statistics.averages("events_per_session")}%.2f"
     )
+
+    println(
+      f"    Distribution:         ${formatDistribution("events_per_session", statistics)}"
+    )
+
     println(
       f"  Addresses per customer: ${statistics.averages("addresses_per_customer")}%.2f"
     )
+
+    println(
+      f"    Distribution:         ${formatDistribution("addresses_per_customer", statistics)}"
+    )
+
     println(
       f"  Returns per order:      ${statistics.averages("returns_per_order")}%.4f"
     )
 
+    println(
+      f"    Distribution:         ${formatDistribution("returns_per_order", statistics)}"
+    )
+
     println()
     println("Financial:")
+
     println(
       s"  Total order value:   ${statistics.financial.totalOrderValue}"
     )
+
     println(
       s"  Average order value: ${statistics.financial.averageOrderValue}"
     )
+
     println(
       s"  Minimum order value: ${statistics.financial.minimumOrderValue}"
     )
+
+    println(
+      s"  P25 order value:     ${statistics.financial.p25OrderValue}"
+    )
+
+    println(
+      s"  Median order value:  ${statistics.financial.medianOrderValue}"
+    )
+
+    println(
+      s"  P75 order value:     ${statistics.financial.p75OrderValue}"
+    )
+
+    println(
+      s"  P95 order value:     ${statistics.financial.p95OrderValue}"
+    )
+
+    println(
+      s"  P99 order value:     ${statistics.financial.p99OrderValue}"
+    )
+
     println(
       s"  Maximum order value: ${statistics.financial.maximumOrderValue}"
     )
@@ -303,7 +356,7 @@ object Main {
       }
 
     // --------------------------------------------------
-    // 7. Generation summary
+    // 8. Generation summary
     // --------------------------------------------------
 
     val elapsedSeconds =
@@ -368,23 +421,23 @@ object Main {
     )
 
     println(
-      s"Payments:           ${generatedData.payments.size}"
+      s"Payments:            ${generatedData.payments.size}"
     )
 
     println(
-      s"Shipments:          ${generatedData.shipments.size}"
+      s"Shipments:           ${generatedData.shipments.size}"
     )
 
     println(
-      s"Returns:            ${generatedData.returns.size}"
+      s"Returns:             ${generatedData.returns.size}"
     )
 
     println(
-      s"Sessions:           ${generatedData.sessions.size}"
+      s"Sessions:            ${generatedData.sessions.size}"
     )
 
     println(
-      s"Events:             ${generatedData.events.size}"
+      s"Events:              ${generatedData.events.size}"
     )
 
     println()
@@ -397,5 +450,22 @@ object Main {
     println(
       "Generation finished successfully."
     )
+  }
+
+  private def formatDistribution(
+                                  name: String,
+                                  statistics: com.shopsphere.datagenerator.statistics.DatasetStatistics
+                                ): String = {
+
+    val distribution =
+      statistics.cardinalityStatistics(name)
+
+    s"min=${distribution.minimum}, " +
+      s"p25=${distribution.p25}, " +
+      s"median=${distribution.median}, " +
+      s"p75=${distribution.p75}, " +
+      s"p95=${distribution.p95}, " +
+      s"p99=${distribution.p99}, " +
+      s"max=${distribution.maximum}"
   }
 }

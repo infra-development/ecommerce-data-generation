@@ -7,5 +7,5 @@ case class ProductPriceDefinition(
                                  )
 
 case class ProductPricingConfig(
-                                 categories: Map[String, ProductPriceDefinition]
+                                 productTypes: Map[String, ProductPriceDefinition]
                                )

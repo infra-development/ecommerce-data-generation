@@ -1,0 +1,520 @@
+[
+  {
+    "id": "PRODUCT_MODEL_001",
+    "category_id": "CATEGORY_001",
+    "product_type_id": "PRODUCT_TYPE_001",
+    "brand_id": "BRAND_001",
+    "name": "Watch 7"
+  },
+  {
+    "id": "PRODUCT_MODEL_002",
+    "category_id": "CATEGORY_001",
+    "product_type_id": "PRODUCT_TYPE_001",
+    "brand_id": "BRAND_002",
+    "name": "Watch Series 10"
+  },
+  {
+    "id": "PRODUCT_MODEL_003",
+    "category_id": "CATEGORY_001",
+    "product_type_id": "PRODUCT_TYPE_001",
+    "brand_id": "BRAND_005",
+    "name": "Watch 2"
+  },
+  {
+    "id": "PRODUCT_MODEL_004",
+    "category_id": "CATEGORY_001",
+    "product_type_id": "PRODUCT_TYPE_002",
+    "brand_id": "BRAND_001",
+    "name": "Buds3 Pro"
+  },
+  {
+    "id": "PRODUCT_MODEL_005",
+    "category_id": "CATEGORY_001",
+    "product_type_id": "PRODUCT_TYPE_002",
+    "brand_id": "BRAND_002",
+    "name": "AirPods Pro 2"
+  },
+  {
+    "id": "PRODUCT_MODEL_006",
+    "category_id": "CATEGORY_001",
+    "product_type_id": "PRODUCT_TYPE_002",
+    "brand_id": "BRAND_005",
+    "name": "Buds Pro 3"
+  },
+  {
+    "id": "PRODUCT_MODEL_007",
+    "category_id": "CATEGORY_001",
+    "product_type_id": "PRODUCT_TYPE_003",
+    "brand_id": "BRAND_001",
+    "name": "Music Frame"
+  },
+  {
+    "id": "PRODUCT_MODEL_008",
+    "category_id": "CATEGORY_001",
+    "product_type_id": "PRODUCT_TYPE_003",
+    "brand_id": "BRAND_004",
+    "name": "SRS-XV800"
+  },
+  {
+    "id": "PRODUCT_MODEL_009",
+    "category_id": "CATEGORY_002",
+    "product_type_id": "PRODUCT_TYPE_004",
+    "brand_id": "BRAND_001",
+    "name": "A55 5G"
+  },
+  {
+    "id": "PRODUCT_MODEL_010",
+    "category_id": "CATEGORY_002",
+    "product_type_id": "PRODUCT_TYPE_004",
+    "brand_id": "BRAND_001",
+    "name": "S25"
+  },
+  {
+    "id": "PRODUCT_MODEL_011",
+    "category_id": "CATEGORY_002",
+    "product_type_id": "PRODUCT_TYPE_004",
+    "brand_id": "BRAND_002",
+    "name": "iPhone 16"
+  },
+  {
+    "id": "PRODUCT_MODEL_012",
+    "category_id": "CATEGORY_002",
+    "product_type_id": "PRODUCT_TYPE_004",
+    "brand_id": "BRAND_002",
+    "name": "iPhone 16 Pro"
+  },
+  {
+    "id": "PRODUCT_MODEL_013",
+    "category_id": "CATEGORY_002",
+    "product_type_id": "PRODUCT_TYPE_004",
+    "brand_id": "BRAND_005",
+    "name": "13"
+  },
+  {
+    "id": "PRODUCT_MODEL_014",
+    "category_id": "CATEGORY_002",
+    "product_type_id": "PRODUCT_TYPE_005",
+    "brand_id": "BRAND_012",
+    "name": "105 4G"
+  },
+  {
+    "id": "PRODUCT_MODEL_015",
+    "category_id": "CATEGORY_002",
+    "product_type_id": "PRODUCT_TYPE_005",
+    "brand_id": "BRAND_003",
+    "name": "Basic Phone"
+  },
+  {
+    "id": "PRODUCT_MODEL_016",
+    "category_id": "CATEGORY_003",
+    "product_type_id": "PRODUCT_TYPE_006",
+    "brand_id": "BRAND_006",
+    "name": "Alienware m16"
+  },
+  {
+    "id": "PRODUCT_MODEL_017",
+    "category_id": "CATEGORY_003",
+    "product_type_id": "PRODUCT_TYPE_006",
+    "brand_id": "BRAND_007",
+    "name": "OMEN Gaming Laptop 16"
+  },
+  {
+    "id": "PRODUCT_MODEL_018",
+    "category_id": "CATEGORY_003",
+    "product_type_id": "PRODUCT_TYPE_007",
+    "brand_id": "BRAND_006",
+    "name": "Latitude 7450"
+  },
+  {
+    "id": "PRODUCT_MODEL_019",
+    "category_id": "CATEGORY_003",
+    "product_type_id": "PRODUCT_TYPE_007",
+    "brand_id": "BRAND_007",
+    "name": "EliteBook 840"
+  },
+  {
+    "id": "PRODUCT_MODEL_020",
+    "category_id": "CATEGORY_003",
+    "product_type_id": "PRODUCT_TYPE_008",
+    "brand_id": "BRAND_008",
+    "name": "Yoga Slim 7"
+  },
+  {
+    "id": "PRODUCT_MODEL_021",
+    "category_id": "CATEGORY_003",
+    "product_type_id": "PRODUCT_TYPE_008",
+    "brand_id": "BRAND_006",
+    "name": "XPS 13"
+  },
+  {
+    "id": "PRODUCT_MODEL_022",
+    "category_id": "CATEGORY_004",
+    "product_type_id": "PRODUCT_TYPE_009",
+    "brand_id": "BRAND_003",
+    "name": "QNED85"
+  },
+  {
+    "id": "PRODUCT_MODEL_023",
+    "category_id": "CATEGORY_004",
+    "product_type_id": "PRODUCT_TYPE_009",
+    "brand_id": "BRAND_004",
+    "name": "Bravia X90L"
+  },
+  {
+    "id": "PRODUCT_MODEL_024",
+    "category_id": "CATEGORY_004",
+    "product_type_id": "PRODUCT_TYPE_009",
+    "brand_id": "BRAND_001",
+    "name": "Crystal UHD DU8000"
+  },
+  {
+    "id": "PRODUCT_MODEL_025",
+    "category_id": "CATEGORY_004",
+    "product_type_id": "PRODUCT_TYPE_010",
+    "brand_id": "BRAND_003",
+    "name": "OLED C4"
+  },
+  {
+    "id": "PRODUCT_MODEL_026",
+    "category_id": "CATEGORY_004",
+    "product_type_id": "PRODUCT_TYPE_010",
+    "brand_id": "BRAND_004",
+    "name": "Bravia 8 OLED"
+  },
+  {
+    "id": "PRODUCT_MODEL_027",
+    "category_id": "CATEGORY_004",
+    "product_type_id": "PRODUCT_TYPE_011",
+    "brand_id": "BRAND_001",
+    "name": "QLED Q80D"
+  },
+  {
+    "id": "PRODUCT_MODEL_028",
+    "category_id": "CATEGORY_004",
+    "product_type_id": "PRODUCT_TYPE_011",
+    "brand_id": "BRAND_004",
+    "name": "Bravia 7"
+  },
+  {
+    "id": "PRODUCT_MODEL_029",
+    "category_id": "CATEGORY_005",
+    "product_type_id": "PRODUCT_TYPE_012",
+    "brand_id": "BRAND_003",
+    "name": "Smart Inverter Refrigerator"
+  },
+  {
+    "id": "PRODUCT_MODEL_030",
+    "category_id": "CATEGORY_005",
+    "product_type_id": "PRODUCT_TYPE_012",
+    "brand_id": "BRAND_001",
+    "name": "Family Hub Refrigerator"
+  },
+  {
+    "id": "PRODUCT_MODEL_031",
+    "category_id": "CATEGORY_005",
+    "product_type_id": "PRODUCT_TYPE_013",
+    "brand_id": "BRAND_003",
+    "name": "AI Direct Drive Washing Machine"
+  },
+  {
+    "id": "PRODUCT_MODEL_032",
+    "category_id": "CATEGORY_005",
+    "product_type_id": "PRODUCT_TYPE_013",
+    "brand_id": "BRAND_001",
+    "name": "EcoBubble Washing Machine"
+  },
+  {
+    "id": "PRODUCT_MODEL_033",
+    "category_id": "CATEGORY_005",
+    "product_type_id": "PRODUCT_TYPE_014",
+    "brand_id": "BRAND_001",
+    "name": "WindFree AC"
+  },
+  {
+    "id": "PRODUCT_MODEL_034",
+    "category_id": "CATEGORY_005",
+    "product_type_id": "PRODUCT_TYPE_014",
+    "brand_id": "BRAND_003",
+    "name": "Dual Inverter AC"
+  },
+  {
+    "id": "PRODUCT_MODEL_035",
+    "category_id": "CATEGORY_005",
+    "product_type_id": "PRODUCT_TYPE_015",
+    "brand_id": "BRAND_013",
+    "name": "Convection Microwave Oven"
+  },
+  {
+    "id": "PRODUCT_MODEL_036",
+    "category_id": "CATEGORY_005",
+    "product_type_id": "PRODUCT_TYPE_015",
+    "brand_id": "BRAND_003",
+    "name": "NeoChef Microwave Oven"
+  },
+  {
+    "id": "PRODUCT_MODEL_037",
+    "category_id": "CATEGORY_006",
+    "product_type_id": "PRODUCT_TYPE_016",
+    "brand_id": "BRAND_009",
+    "name": "Sports Performance T-Shirt"
+  },
+  {
+    "id": "PRODUCT_MODEL_038",
+    "category_id": "CATEGORY_006",
+    "product_type_id": "PRODUCT_TYPE_016",
+    "brand_id": "BRAND_010",
+    "name": "Essentials Logo T-Shirt"
+  },
+  {
+    "id": "PRODUCT_MODEL_039",
+    "category_id": "CATEGORY_006",
+    "product_type_id": "PRODUCT_TYPE_017",
+    "brand_id": "BRAND_009",
+    "name": "Club Denim"
+  },
+  {
+    "id": "PRODUCT_MODEL_040",
+    "category_id": "CATEGORY_006",
+    "product_type_id": "PRODUCT_TYPE_017",
+    "brand_id": "BRAND_010",
+    "name": "Adicolor Denim Jeans"
+  },
+  {
+    "id": "PRODUCT_MODEL_041",
+    "category_id": "CATEGORY_006",
+    "product_type_id": "PRODUCT_TYPE_018",
+    "brand_id": "BRAND_009",
+    "name": "Storm-FIT Jacket"
+  },
+  {
+    "id": "PRODUCT_MODEL_042",
+    "category_id": "CATEGORY_006",
+    "product_type_id": "PRODUCT_TYPE_018",
+    "brand_id": "BRAND_010",
+    "name": "Essentials Padded Jacket"
+  },
+  {
+    "id": "PRODUCT_MODEL_043",
+    "category_id": "CATEGORY_006",
+    "product_type_id": "PRODUCT_TYPE_019",
+    "brand_id": "BRAND_010",
+    "name": "Adicolor Dress"
+  },
+  {
+    "id": "PRODUCT_MODEL_044",
+    "category_id": "CATEGORY_006",
+    "product_type_id": "PRODUCT_TYPE_019",
+    "brand_id": "BRAND_009",
+    "name": "Sportswear Dress"
+  },
+  {
+    "id": "PRODUCT_MODEL_045",
+    "category_id": "CATEGORY_007",
+    "product_type_id": "PRODUCT_TYPE_020",
+    "brand_id": "BRAND_009",
+    "name": "Air Max 270"
+  },
+  {
+    "id": "PRODUCT_MODEL_046",
+    "category_id": "CATEGORY_007",
+    "product_type_id": "PRODUCT_TYPE_020",
+    "brand_id": "BRAND_010",
+    "name": "Ultraboost Light"
+  },
+  {
+    "id": "PRODUCT_MODEL_047",
+    "category_id": "CATEGORY_007",
+    "product_type_id": "PRODUCT_TYPE_021",
+    "brand_id": "BRAND_009",
+    "name": "Air Force 1"
+  },
+  {
+    "id": "PRODUCT_MODEL_048",
+    "category_id": "CATEGORY_007",
+    "product_type_id": "PRODUCT_TYPE_021",
+    "brand_id": "BRAND_010",
+    "name": "Forum Low"
+  },
+  {
+    "id": "PRODUCT_MODEL_049",
+    "category_id": "CATEGORY_007",
+    "product_type_id": "PRODUCT_TYPE_022",
+    "brand_id": "BRAND_009",
+    "name": "Pegasus 41"
+  },
+  {
+    "id": "PRODUCT_MODEL_050",
+    "category_id": "CATEGORY_007",
+    "product_type_id": "PRODUCT_TYPE_022",
+    "brand_id": "BRAND_010",
+    "name": "Supernova Rise"
+  },
+  {
+    "id": "PRODUCT_MODEL_051",
+    "category_id": "CATEGORY_008",
+    "product_type_id": "PRODUCT_TYPE_023",
+    "brand_id": "BRAND_016",
+    "name": "Apple Cider Vinegar Face Wash"
+  },
+  {
+    "id": "PRODUCT_MODEL_052",
+    "category_id": "CATEGORY_008",
+    "product_type_id": "PRODUCT_TYPE_023",
+    "brand_id": "BRAND_016",
+    "name": "Gentle Foaming Cleanser"
+  },
+  {
+    "id": "PRODUCT_MODEL_053",
+    "category_id": "CATEGORY_008",
+    "product_type_id": "PRODUCT_TYPE_024",
+    "brand_id": "BRAND_015",
+    "name": "Hydrating Moisturizer"
+  },
+  {
+    "id": "PRODUCT_MODEL_054",
+    "category_id": "CATEGORY_008",
+    "product_type_id": "PRODUCT_TYPE_024",
+    "brand_id": "BRAND_016",
+    "name": "Daily Moisture Cream"
+  },
+  {
+    "id": "PRODUCT_MODEL_055",
+    "category_id": "CATEGORY_008",
+    "product_type_id": "PRODUCT_TYPE_025",
+    "brand_id": "BRAND_015",
+    "name": "Daily Repair Shampoo"
+  },
+  {
+    "id": "PRODUCT_MODEL_056",
+    "category_id": "CATEGORY_008",
+    "product_type_id": "PRODUCT_TYPE_025",
+    "brand_id": "BRAND_016",
+    "name": "Scalp Care Shampoo"
+  },
+  {
+    "id": "PRODUCT_MODEL_057",
+    "category_id": "CATEGORY_008",
+    "product_type_id": "PRODUCT_TYPE_026",
+    "brand_id": "BRAND_018",
+    "name": "Matte Lip Color"
+  },
+  {
+    "id": "PRODUCT_MODEL_058",
+    "category_id": "CATEGORY_008",
+    "product_type_id": "PRODUCT_TYPE_026",
+    "brand_id": "BRAND_017",
+    "name": "Long Stay Lipstick"
+  },
+  {
+    "id": "PRODUCT_MODEL_059",
+    "category_id": "CATEGORY_009",
+    "product_type_id": "PRODUCT_TYPE_027",
+    "brand_id": "BRAND_019",
+    "name": "The Last Chapter"
+  },
+  {
+    "id": "PRODUCT_MODEL_060",
+    "category_id": "CATEGORY_009",
+    "product_type_id": "PRODUCT_TYPE_027",
+    "brand_id": "BRAND_020",
+    "name": "The Silent Valley"
+  },
+  {
+    "id": "PRODUCT_MODEL_061",
+    "category_id": "CATEGORY_009",
+    "product_type_id": "PRODUCT_TYPE_028",
+    "brand_id": "BRAND_019",
+    "name": "A History of Modern India"
+  },
+  {
+    "id": "PRODUCT_MODEL_062",
+    "category_id": "CATEGORY_009",
+    "product_type_id": "PRODUCT_TYPE_028",
+    "brand_id": "BRAND_020",
+    "name": "The World Around Us"
+  },
+  {
+    "id": "PRODUCT_MODEL_063",
+    "category_id": "CATEGORY_009",
+    "product_type_id": "PRODUCT_TYPE_029",
+    "brand_id": "BRAND_021",
+    "name": "Learning Scala"
+  },
+  {
+    "id": "PRODUCT_MODEL_064",
+    "category_id": "CATEGORY_009",
+    "product_type_id": "PRODUCT_TYPE_029",
+    "brand_id": "BRAND_021",
+    "name": "Modern Data Engineering"
+  },
+  {
+    "id": "PRODUCT_MODEL_065",
+    "category_id": "CATEGORY_009",
+    "product_type_id": "PRODUCT_TYPE_030",
+    "brand_id": "BRAND_020",
+    "name": "Modern Business Strategy"
+  },
+  {
+    "id": "PRODUCT_MODEL_066",
+    "category_id": "CATEGORY_009",
+    "product_type_id": "PRODUCT_TYPE_030",
+    "brand_id": "BRAND_020",
+    "name": "Leadership Principles"
+  },
+  {
+    "id": "PRODUCT_MODEL_067",
+    "category_id": "CATEGORY_010",
+    "product_type_id": "PRODUCT_TYPE_031",
+    "brand_id": "BRAND_023",
+    "name": "Premium Snack Pack"
+  },
+  {
+    "id": "PRODUCT_MODEL_068",
+    "category_id": "CATEGORY_010",
+    "product_type_id": "PRODUCT_TYPE_031",
+    "brand_id": "BRAND_023",
+    "name": "Classic Potato Chips"
+  },
+  {
+    "id": "PRODUCT_MODEL_069",
+    "category_id": "CATEGORY_010",
+    "product_type_id": "PRODUCT_TYPE_032",
+    "brand_id": "BRAND_022",
+    "name": "Sparkling Fruit Drink"
+  },
+  {
+    "id": "PRODUCT_MODEL_070",
+    "category_id": "CATEGORY_010",
+    "product_type_id": "PRODUCT_TYPE_032",
+    "brand_id": "BRAND_022",
+    "name": "Premium Green Tea"
+  },
+  {
+    "id": "PRODUCT_MODEL_071",
+    "category_id": "CATEGORY_010",
+    "product_type_id": "PRODUCT_TYPE_033",
+    "brand_id": "BRAND_024",
+    "name": "Premium Basmati Rice"
+  },
+  {
+    "id": "PRODUCT_MODEL_072",
+    "category_id": "CATEGORY_010",
+    "product_type_id": "PRODUCT_TYPE_033",
+    "brand_id": "BRAND_026",
+    "name": "Whole Wheat Flour"
+  },
+  {
+    "id": "PRODUCT_MODEL_073",
+    "category_id": "CATEGORY_010",
+    "product_type_id": "PRODUCT_TYPE_034",
+    "brand_id": "BRAND_022",
+    "name": "Ready to Cook Meal"
+  },
+  {
+    "id": "PRODUCT_MODEL_074",
+    "category_id": "CATEGORY_010",
+    "product_type_id": "PRODUCT_TYPE_034",
+    "brand_id": "BRAND_025",
+    "name": "Instant Breakfast Mix"
+  }
+]

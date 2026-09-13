@@ -11,13 +11,13 @@ class ProductPricingConfigLoaderTest extends AnyFunSuite {
       ConfigFactory.parseString(
         """
           |product-pricing {
-          |  CATEGORY_001 {
+          |  PRODUCT_TYPE_001 {
           |    min = 500.0
           |    max = 150000.0
           |    mode = 30000.0
           |  }
           |
-          |  CATEGORY_002 {
+          |  PRODUCT_TYPE_002 {
           |    min = 3000.0
           |    max = 150000.0
           |    mode = 30000.0
@@ -29,10 +29,10 @@ class ProductPricingConfigLoaderTest extends AnyFunSuite {
     val pricing =
       ProductPricingConfigLoader.load(config)
 
-    assert(pricing.categories.size == 2)
+    assert(pricing.productTypes.size == 2)
 
     val electronics =
-      pricing.categories("CATEGORY_001")
+      pricing.productTypes("PRODUCT_TYPE_001")
 
     assert(electronics.min == 500.0)
     assert(electronics.max == 150000.0)
@@ -67,7 +67,7 @@ class ProductPricingConfigLoaderTest extends AnyFunSuite {
       ConfigFactory.parseString(
         """
           |product-pricing {
-          |  CATEGORY_001 {
+          |  PRODUCT_TYPE_001 {
           |    max = 150000.0
           |    mode = 30000.0
           |  }
@@ -93,7 +93,7 @@ class ProductPricingConfigLoaderTest extends AnyFunSuite {
       ConfigFactory.parseString(
         """
           |product-pricing {
-          |  CATEGORY_001 {
+          |  PRODUCT_TYPE_001 {
           |    min = 500.0
           |    mode = 30000.0
           |  }
@@ -119,7 +119,7 @@ class ProductPricingConfigLoaderTest extends AnyFunSuite {
       ConfigFactory.parseString(
         """
           |product-pricing {
-          |  CATEGORY_001 {
+          |  PRODUCT_TYPE_001 {
           |    min = 500.0
           |    max = 150000.0
           |  }
@@ -145,7 +145,7 @@ class ProductPricingConfigLoaderTest extends AnyFunSuite {
       ConfigFactory.parseString(
         """
           |product-pricing {
-          |  CATEGORY_001 {
+          |  PRODUCT_TYPE_001 {
           |    min = -500.0
           |    max = 150000.0
           |    mode = 30000.0
@@ -165,7 +165,7 @@ class ProductPricingConfigLoaderTest extends AnyFunSuite {
       ConfigFactory.parseString(
         """
           |product-pricing {
-          |  CATEGORY_001 {
+          |  PRODUCT_TYPE_001 {
           |    min = 150000.0
           |    max = 500.0
           |    mode = 30000.0
@@ -185,7 +185,7 @@ class ProductPricingConfigLoaderTest extends AnyFunSuite {
       ConfigFactory.parseString(
         """
           |product-pricing {
-          |  CATEGORY_001 {
+          |  PRODUCT_TYPE_001 {
           |    min = 500.0
           |    max = 150000.0
           |    mode = 100.0
@@ -205,7 +205,7 @@ class ProductPricingConfigLoaderTest extends AnyFunSuite {
       ConfigFactory.parseString(
         """
           |product-pricing {
-          |  CATEGORY_001 {
+          |  PRODUCT_TYPE_001 {
           |    min = 500.0
           |    max = 150000.0
           |    mode = 200000.0

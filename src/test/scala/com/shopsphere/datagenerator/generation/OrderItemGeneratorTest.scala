@@ -9,9 +9,11 @@ class OrderItemGeneratorTest extends AnyFunSuite {
   private val product =
     Product(
       id = "PRODUCT_000001",
-      name = "Samsung Electronics Product",
-      categoryId = "CATEGORY_001",
+      name = "Samsung Smartphone",
+      categoryId = "CATEGORY_002",
+      productTypeId = "PRODUCT_TYPE_004",
       brandId = "BRAND_001",
+      productModelId = "PRODUCT_MODEL_001",
       price = BigDecimal("24999.99")
     )
 

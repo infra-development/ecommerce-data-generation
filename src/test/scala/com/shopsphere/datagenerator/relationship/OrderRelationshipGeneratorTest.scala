@@ -16,21 +16,27 @@ class OrderRelationshipGeneratorTest extends AnyFunSuite {
         id = "PRODUCT_000001",
         name = "Samsung Electronics Product",
         categoryId = "CATEGORY_001",
+        productTypeId = "PRODUCT_TYPE_001",
         brandId = "BRAND_001",
+        productModelId = "PRODUCT_MODEL_001",
         price = BigDecimal("1000.00")
       ),
       Product(
         id = "PRODUCT_000002",
         name = "Apple Mobiles Product",
         categoryId = "CATEGORY_002",
+        productTypeId = "PRODUCT_TYPE_004",
         brandId = "BRAND_002",
+        productModelId = "PRODUCT_MODEL_002",
         price = BigDecimal("2500.00")
       ),
       Product(
         id = "PRODUCT_000003",
         name = "LG Television Product",
         categoryId = "CATEGORY_003",
+        productTypeId = "PRODUCT_TYPE_006",
         brandId = "BRAND_003",
+        productModelId = "PRODUCT_MODEL_003",
         price = BigDecimal("5000.00")
       )
     )
@@ -48,7 +54,6 @@ class OrderRelationshipGeneratorTest extends AnyFunSuite {
               "CANCELLED" -> 0.05
             )
           ),
-
         "payment_method" ->
           new WeightedDistribution(
             Seq(
@@ -267,15 +272,19 @@ class OrderRelationshipGeneratorTest extends AnyFunSuite {
         Product(
           id = "PRODUCT_001",
           name = "Samsung Mobile",
-          categoryId = "CATEGORY_001",
+          categoryId = "CATEGORY_002",
+          productTypeId = "PRODUCT_TYPE_004",
           brandId = "BRAND_001",
+          productModelId = "PRODUCT_MODEL_001",
           price = BigDecimal("10000.00")
         ),
         Product(
           id = "PRODUCT_002",
           name = "Nike Shoes",
-          categoryId = "CATEGORY_002",
-          brandId = "BRAND_002",
+          categoryId = "CATEGORY_007",
+          productTypeId = "PRODUCT_TYPE_020",
+          brandId = "BRAND_009",
+          productModelId = "PRODUCT_MODEL_002",
           price = BigDecimal("5000.00")
         )
       )
@@ -344,8 +353,10 @@ class OrderRelationshipGeneratorTest extends AnyFunSuite {
         Product(
           id = "PRODUCT_001",
           name = "Samsung Mobile",
-          categoryId = "CATEGORY_001",
+          categoryId = "CATEGORY_002",
+          productTypeId = "PRODUCT_TYPE_004",
           brandId = "BRAND_001",
+          productModelId = "PRODUCT_MODEL_001",
           price = BigDecimal("10000.00")
         )
       )

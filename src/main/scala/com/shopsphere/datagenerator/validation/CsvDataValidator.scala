@@ -1,5 +1,8 @@
 package com.shopsphere.datagenerator.validation
 
+import com.shopsphere.datagenerator.config.ConfigLoader
+import com.shopsphere.datagenerator.reference.catalog.CatalogReferenceLoader
+
 import java.nio.file.Paths
 
 object CsvDataValidator {
@@ -41,7 +44,9 @@ object CsvDataValidator {
           "id",
           "name",
           "category_id",
+          "product_type_id",
           "brand_id",
+          "product_model_id",
           "price"
         ),
 
@@ -350,14 +355,6 @@ object CsvDataValidator {
         "customers"
       )
 
-    /*
-     * Customer → Address is intentionally not validated yet.
-     *
-     * addresses.csv currently has no customer_id column.
-     *
-     * This is a known data-model gap that we will address separately.
-     */
-
     current
   }
 
@@ -445,6 +442,12 @@ object CsvDataValidator {
       result
 
     current =
+      validateProducts(
+        tables,
+        current
+      )
+
+    current =
       validateOrderTotals(
         tables,
         current
@@ -473,6 +476,244 @@ object CsvDataValidator {
         tables,
         current
       )
+
+    current
+  }
+
+  private def validateProducts(
+                                tables: Map[String, CsvTable],
+                                result: ValidationResult
+                              ): ValidationResult = {
+
+    val catalogReferenceData =
+      CatalogReferenceLoader.load(
+        Paths.get("data/reference/catalog")
+      )
+
+    val pricingConfig =
+      ConfigLoader.load().productPricing
+
+    val categoriesById =
+      catalogReferenceData.categories
+        .map(category => category.id -> category)
+        .toMap
+
+    val productTypesById =
+      catalogReferenceData.productTypes
+        .map(productType => productType.id -> productType)
+        .toMap
+
+    val brandsById =
+      catalogReferenceData.brands
+        .map(brand => brand.id -> brand)
+        .toMap
+
+    val productModelsById =
+      catalogReferenceData.productModels
+        .map(model => model.id -> model)
+        .toMap
+
+    val products =
+      tables("products").rows
+
+    var current =
+      result
+
+    val invalidCategories =
+      products
+        .filter(product =>
+          !categoriesById.contains(product("category_id"))
+        )
+
+    if (invalidCategories.nonEmpty) {
+      current =
+        current.add(
+          category = "BUSINESS_RULE",
+          entity = "products",
+          message =
+            s"${invalidCategories.size} products contain invalid category references."
+        )
+    }
+
+    val invalidProductTypes =
+      products
+        .filter(product =>
+          !productTypesById.contains(product("product_type_id"))
+        )
+
+    if (invalidProductTypes.nonEmpty) {
+      current =
+        current.add(
+          category = "BUSINESS_RULE",
+          entity = "products",
+          message =
+            s"${invalidProductTypes.size} products contain invalid product type references."
+        )
+    }
+
+    val invalidBrands =
+      products
+        .filter(product =>
+          !brandsById.contains(product("brand_id"))
+        )
+
+    if (invalidBrands.nonEmpty) {
+      current =
+        current.add(
+          category = "BUSINESS_RULE",
+          entity = "products",
+          message =
+            s"${invalidBrands.size} products contain invalid brand references."
+        )
+    }
+
+    val invalidProductModels =
+      products
+        .filter(product =>
+          !productModelsById.contains(product("product_model_id"))
+        )
+
+    if (invalidProductModels.nonEmpty) {
+      current =
+        current.add(
+          category = "BUSINESS_RULE",
+          entity = "products",
+          message =
+            s"${invalidProductModels.size} products contain invalid product model references."
+        )
+    }
+
+    val invalidCategoryTypeRelationships =
+      products.filter { product =>
+
+        (
+          for {
+            category <- categoriesById.get(product("category_id"))
+            productType <- productTypesById.get(product("product_type_id"))
+          } yield productType.categoryId == category.id
+          ).contains(false)
+      }
+
+    if (invalidCategoryTypeRelationships.nonEmpty) {
+      current =
+        current.add(
+          category = "BUSINESS_RULE",
+          entity = "products",
+          message =
+            s"${invalidCategoryTypeRelationships.size} products have " +
+              "a product type that does not belong to their category."
+        )
+    }
+
+    val invalidModelCategoryRelationships =
+      products.filter { product =>
+
+        (
+          for {
+            category <- categoriesById.get(product("category_id"))
+            model <- productModelsById.get(product("product_model_id"))
+          } yield model.categoryId == category.id
+          ).contains(false)
+      }
+
+    if (invalidModelCategoryRelationships.nonEmpty) {
+      current =
+        current.add(
+          category = "BUSINESS_RULE",
+          entity = "products",
+          message =
+            s"${invalidModelCategoryRelationships.size} products have " +
+              "a product model that does not belong to their category."
+        )
+    }
+
+    val invalidModelTypeRelationships =
+      products.filter { product =>
+
+        (
+          for {
+            productType <- productTypesById.get(product("product_type_id"))
+            model <- productModelsById.get(product("product_model_id"))
+          } yield model.productTypeId == productType.id
+          ).contains(false)
+      }
+
+    if (invalidModelTypeRelationships.nonEmpty) {
+      current =
+        current.add(
+          category = "BUSINESS_RULE",
+          entity = "products",
+          message =
+            s"${invalidModelTypeRelationships.size} products have " +
+              "a product model that does not belong to their product type."
+        )
+    }
+
+    val invalidModelBrandRelationships =
+      products.filter { product =>
+
+        (
+          for {
+            brand <- brandsById.get(product("brand_id"))
+            model <- productModelsById.get(product("product_model_id"))
+          } yield model.brandId == brand.id
+          ).contains(false)
+      }
+
+    if (invalidModelBrandRelationships.nonEmpty) {
+      current =
+        current.add(
+          category = "BUSINESS_RULE",
+          entity = "products",
+          message =
+            s"${invalidModelBrandRelationships.size} products have " +
+              "a product model that does not belong to their brand."
+        )
+    }
+
+    val invalidPrices =
+      products.filter { product =>
+
+        pricingConfig.productTypes
+          .get(product("product_type_id"))
+          .exists { priceDefinition =>
+
+            val price =
+              BigDecimal(product("price"))
+
+            price < BigDecimal(priceDefinition.min) ||
+              price > BigDecimal(priceDefinition.max)
+          }
+      }
+
+    if (invalidPrices.nonEmpty) {
+      current =
+        current.add(
+          category = "BUSINESS_RULE",
+          entity = "products",
+          message =
+            s"${invalidPrices.size} products have prices outside " +
+              "their configured product-type price range."
+        )
+    }
+
+    val missingPricingConfiguration =
+      products.filter { product =>
+        !pricingConfig.productTypes.contains(
+          product("product_type_id")
+        )
+      }
+
+    if (missingPricingConfiguration.nonEmpty) {
+      current =
+        current.add(
+          category = "BUSINESS_RULE",
+          entity = "products",
+          message =
+            s"${missingPricingConfiguration.size} products reference " +
+              "product types without pricing configuration."
+        )
+    }
 
     current
   }

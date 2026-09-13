@@ -38,5 +38,69 @@
   {
     "id": "BRAND_010",
     "name": "Adidas"
+  },
+  {
+    "id": "BRAND_011",
+    "name": "JBL"
+  },
+  {
+    "id": "BRAND_012",
+    "name": "Nokia"
+  },
+  {
+    "id": "BRAND_013",
+    "name": "Panasonic"
+  },
+  {
+    "id": "BRAND_014",
+    "name": "Puma"
+  },
+  {
+    "id": "BRAND_015",
+    "name": "L'Oréal"
+  },
+  {
+    "id": "BRAND_016",
+    "name": "Nivea"
+  },
+  {
+    "id": "BRAND_017",
+    "name": "Lakmé"
+  },
+  {
+    "id": "BRAND_018",
+    "name": "Maybelline"
+  },
+  {
+    "id": "BRAND_019",
+    "name": "Penguin Random House"
+  },
+  {
+    "id": "BRAND_020",
+    "name": "HarperCollins"
+  },
+  {
+    "id": "BRAND_021",
+    "name": "O'Reilly"
+  },
+  {
+    "id": "BRAND_022",
+    "name": "Nestlé"
+  },
+  {
+    "id": "BRAND_023",
+    "name": "Britannia"
+  },
+  {
+    "id": "BRAND_024",
+    "name": "Tata Consumer"
+  },
+  {
+    "id": "BRAND_025",
+    "name": "Amul"
+  },
+  {
+    "id": "BRAND_026",
+    "name": "ITC"
   }
 ]
