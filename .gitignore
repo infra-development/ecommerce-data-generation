@@ -1,5 +1,7 @@
 # Compiled class file
 *.class
+.bsp
+target
 
 # Log file
 *.log

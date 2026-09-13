@@ -9,6 +9,7 @@ class AddressTest extends AnyFunSuite {
     val address =
       Address(
         id = "ADDRESS_000001",
+        customerId = "CUSTOMER_000001",
         buildingId = "BUILDING_002",
         unitNumber = "B402",
         postalCode = "440015"
@@ -25,6 +26,7 @@ class AddressTest extends AnyFunSuite {
     val address =
       Address(
         id = "ADDRESS_000002",
+        customerId = "CUSTOMER_000001",
         buildingId = "BUILDING_002",
         unitNumber = "GF-03",
         postalCode = "440015"

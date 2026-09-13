@@ -32,8 +32,14 @@ object GenerationPipeline {
     val addresses =
       generateAddresses(
         context,
-        plan
+        plan,
+        customers
       )
+
+    require(
+      addresses.size == plan.addressCount,
+      s"Generated ${addresses.size} addresses but expected ${plan.addressCount}."
+    )
 
     println("Generating categories and brands...")
 
@@ -121,20 +127,48 @@ object GenerationPipeline {
 
   private def generateAddresses(
                                  context: GenerationContext,
-                                 plan: GenerationPlan
+                                 plan: GenerationPlan,
+                                 customers: Seq[Customer]
                                ): Seq[Address] = {
+
+    require(
+      customers.nonEmpty,
+      "Customers must not be empty when generating addresses."
+    )
 
     val random =
       context.random.derive("addresses")
 
-    (1L to plan.addressCount).map { index =>
-
-      AddressGenerator.generate(
-        addressId =
-          f"ADDRESS_$index%09d",
-        geography = context.geography,
-        random = random.derive(index.toString)
+    val addressCounts =
+      CardinalityAllocator.allocate(
+        baseCount = customers.size,
+        averagePerBase =
+          context.config.cardinality.addressesPerCustomer
       )
+
+    var addressIndex = 1L
+
+    customers.zip(addressCounts).flatMap {
+      case (customer, addressCount) =>
+
+        (1 to addressCount).map { sequence =>
+
+          val address =
+            AddressGenerator.generate(
+              addressId =
+                f"ADDRESS_$addressIndex%09d",
+              customerId = customer.id,
+              geography = context.geography,
+              random =
+                random.derive(
+                  s"${customer.id}-$sequence"
+                )
+            )
+
+          addressIndex += 1
+
+          address
+        }
     }
   }
 

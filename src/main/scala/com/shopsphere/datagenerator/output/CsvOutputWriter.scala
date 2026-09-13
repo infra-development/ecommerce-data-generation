@@ -88,6 +88,7 @@ object CsvOutputWriter {
       outputPath.resolve("addresses.csv"),
       Seq(
         "id",
+        "customer_id",
         "building_id",
         "unit_number",
         "postal_code"
@@ -95,6 +96,7 @@ object CsvOutputWriter {
       data.addresses.iterator.map { address =>
         Seq(
           address.id,
+          address.customerId,
           address.buildingId,
           address.unitNumber,
           address.postalCode

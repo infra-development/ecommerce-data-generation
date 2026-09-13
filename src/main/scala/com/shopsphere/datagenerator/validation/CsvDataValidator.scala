@@ -18,6 +18,7 @@ object CsvDataValidator {
       "addresses" ->
         Seq(
           "id",
+          "customer_id",
           "building_id",
           "unit_number",
           "postal_code"
@@ -338,6 +339,15 @@ object CsvDataValidator {
         "events",
         "product_id",
         "products"
+      )
+
+    current =
+      validateForeignKey(
+        tables,
+        current,
+        "addresses",
+        "customer_id",
+        "customers"
       )
 
     /*
