@@ -1,5 +1,7 @@
 package com.shopsphere.datagenerator.distribution
 
+import com.shopsphere.datagenerator.common.distribution.TriangularDistribution
+import com.shopsphere.datagenerator.common.random.RandomGenerator
 import org.scalatest.funsuite.AnyFunSuite
 
 class TriangularDistributionTest extends AnyFunSuite {

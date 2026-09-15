@@ -1,12 +1,12 @@
 package com.shopsphere.datagenerator.generation
 
+import com.shopsphere.datagenerator.common.random.RandomGenerator
 import com.shopsphere.datagenerator.config.{
   ProductBrandAffinityConfig,
   ProductDistributionConfig,
   ProductPriceDefinition,
   ProductPricingConfig
 }
-import com.shopsphere.datagenerator.distribution.RandomGenerator
 import com.shopsphere.datagenerator.reference.catalog.CatalogReferenceLoader
 import org.scalatest.funsuite.AnyFunSuite
 

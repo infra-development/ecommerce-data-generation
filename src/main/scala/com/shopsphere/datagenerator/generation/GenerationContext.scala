@@ -1,10 +1,8 @@
 package com.shopsphere.datagenerator.generation
 
+import com.shopsphere.datagenerator.common.distribution.DistributionEngine
+import com.shopsphere.datagenerator.common.random.RandomGenerator
 import com.shopsphere.datagenerator.config.GenerationConfig
-import com.shopsphere.datagenerator.distribution.{
-  DistributionEngine,
-  RandomGenerator
-}
 import com.shopsphere.datagenerator.reference.GeographyReferenceData
 
 case class GenerationContext(

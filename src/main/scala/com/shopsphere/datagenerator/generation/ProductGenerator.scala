@@ -1,14 +1,11 @@
 package com.shopsphere.datagenerator.generation
 
+import com.shopsphere.datagenerator.common.distribution.{TriangularDistribution, WeightedDistribution}
+import com.shopsphere.datagenerator.common.random.RandomGenerator
 import com.shopsphere.datagenerator.config.{
   ProductBrandAffinityConfig,
   ProductDistributionConfig,
   ProductPricingConfig
-}
-import com.shopsphere.datagenerator.distribution.{
-  RandomGenerator,
-  TriangularDistribution,
-  WeightedDistribution
 }
 import com.shopsphere.datagenerator.model.Product
 import com.shopsphere.datagenerator.reference.catalog.CatalogReferenceData

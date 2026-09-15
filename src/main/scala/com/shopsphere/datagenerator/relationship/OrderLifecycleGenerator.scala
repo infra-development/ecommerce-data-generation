@@ -1,7 +1,6 @@
 package com.shopsphere.datagenerator.relationship
 
-import com.shopsphere.datagenerator.distribution.RandomGenerator
-
+import com.shopsphere.datagenerator.common.random.RandomGenerator
 import java.time.LocalDateTime
 
 object OrderLifecycleGenerator {

@@ -1,5 +1,7 @@
 package com.shopsphere.datagenerator.distribution
 
+import com.shopsphere.datagenerator.common.distribution.WeightedDistribution
+import com.shopsphere.datagenerator.common.random.RandomGenerator
 import org.scalatest.funsuite.AnyFunSuite
 
 class WeightedDistributionTest extends AnyFunSuite {

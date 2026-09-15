@@ -1,10 +1,7 @@
 package com.shopsphere.datagenerator.relationship
 
-import com.shopsphere.datagenerator.distribution.{
-  DistributionEngine,
-  RandomGenerator,
-  WeightedDistribution
-}
+import com.shopsphere.datagenerator.common.distribution.{DistributionEngine, WeightedDistribution}
+import com.shopsphere.datagenerator.common.random.RandomGenerator
 import com.shopsphere.datagenerator.model.Product
 import org.scalatest.funsuite.AnyFunSuite
 

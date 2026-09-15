@@ -1,10 +1,8 @@
 package com.shopsphere.datagenerator.generation
 
+import com.shopsphere.datagenerator.common.distribution.WeightedDistribution
+import com.shopsphere.datagenerator.common.random.RandomGenerator
 import com.shopsphere.datagenerator.config.CustomerGenerationConfig
-import com.shopsphere.datagenerator.distribution.{
-  RandomGenerator,
-  WeightedDistribution
-}
 import com.shopsphere.datagenerator.model.Customer
 import com.shopsphere.datagenerator.reference.customer.CustomerReferenceData
 

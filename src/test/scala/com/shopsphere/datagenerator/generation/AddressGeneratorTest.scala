@@ -1,6 +1,6 @@
 package com.shopsphere.datagenerator.generation
 
-import com.shopsphere.datagenerator.distribution.RandomGenerator
+import com.shopsphere.datagenerator.common.random.RandomGenerator
 import com.shopsphere.datagenerator.reference.GeographyLoader
 import org.scalatest.funsuite.AnyFunSuite
 

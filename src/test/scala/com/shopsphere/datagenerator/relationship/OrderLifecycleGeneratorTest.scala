@@ -1,6 +1,6 @@
 package com.shopsphere.datagenerator.relationship
 
-import com.shopsphere.datagenerator.distribution.RandomGenerator
+import com.shopsphere.datagenerator.common.random.RandomGenerator
 import org.scalatest.funsuite.AnyFunSuite
 
 import java.time.LocalDateTime
